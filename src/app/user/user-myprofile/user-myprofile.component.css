@@ -1,0 +1,66 @@
+.left-div {
+  background: linear-gradient(to right, rgb(0, 61, 205), rgb(0, 61, 201));
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  color: whitesmoke;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
+.myprofile-text {
+  font-size: 22px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.rigt-div {
+  height: 400px;
+}
+
+.profile-div-1 {
+  height: 170px;
+  background-color: rgb(249, 165, 1);
+  margin: 10px 20px 20px 20px;
+  color: white;
+  padding-top: 55px;
+}
+
+.profile-div-2 {
+  height: 170px;
+  background-color: rgb(15, 194, 203);
+  margin: 10px 20px 20px 20px;
+  color: white;
+  padding-top: 55px;
+}
+
+.profile-div-3 {
+  height: 170px;
+  background-color: rgb(6, 50, 157);
+  margin: 30px 20px 20px 20px;
+  color: white;
+  padding-top: 55px;
+}
+
+.profile-div-4 {
+  height: 170px;
+  background-color: rgb(238, 195, 20);
+  margin: 30px 20px 20px 20px;
+  color: white;
+  padding-top: 55px;
+}
+
+.tiles-font{
+  font-size: 30px;
+  color: white !important;
+}
+
+.tiles-heading{
+  color: white !important;
+}
+
+a {
+  text-decoration: none;
+}

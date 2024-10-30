@@ -1,0 +1,68 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Referral ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Aadhar</th>
+        <th scope="col">PAN</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">UPI ID</th>
+        <th scope="col">Delivery Type</th>
+        <th scope="col">Product</th>
+        <th scope="col">Payment screenshot</th>
+        <th scope="col">Transaction number</th>
+        <th scope="col">Email Verified</th>
+        <th scope="col">Created on</th>
+        <th scope="col">Accept</th>
+        <th scope="col">Reject</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersData; let i = index">
+        <td scope="row">{{ i + 1 }}</td>
+        <td>{{ user.referenceId }}</td>
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.lastname }}</td>
+        <td>{{ user.aadhar }}</td>
+        <td>{{ user.pan }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.address }}</td>
+        <td>{{ user.userUPI }}</td>
+        <td>{{ user.shipmentType }}</td>
+        <td>{{ user.productId }}</td>
+        <td>
+          <a
+            [href]="getPaymentScreenshotUrl(user.paymentScreenshot)"
+            target="_blank"
+            >View Image</a
+          >
+        </td>
+        <td>{{ user.paymentTransactionId }}</td>
+        <td>{{ user.emailVerified }}</td>
+        <td>{{ user.createdAt }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            (click)="updateUserStatusById(user.id, 'ACCEPTED')"
+          >
+            Accept
+          </button>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-outline-danger"
+            (click)="updateUserStatusById(user.id, 'REJECTED')"
+          >
+            Rejected
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

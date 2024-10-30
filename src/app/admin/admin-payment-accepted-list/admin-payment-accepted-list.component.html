@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Referral ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">UPI ID</th>
+        <th scope="col">Created on</th>
+        <th scope="col">Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of paymentData; let i = index">
+        <td scope="row">{{ i + 1 }}</td>
+        <td>{{ payment.referenceId }}</td>
+        <td>{{ payment.firstname }}</td>
+        <td>{{ payment.lastname }}</td>
+        <td>{{ payment.phone }}</td>
+        <td>{{ payment.address }}</td>
+        <td>{{ payment.userUPI }}</td>
+        <td>{{ payment.createdAt }}</td>
+        <td>{{ payment.balance }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

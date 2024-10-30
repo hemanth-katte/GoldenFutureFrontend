@@ -1,0 +1,28 @@
+<app-user-navbar></app-user-navbar>
+<div class="main-div">
+  <div class="container">
+    <div class="centered">
+      <h4>Welcome to</h4>
+      <div style="display: inline-flex">
+        <h1 class="home-center-text">Golden Future</h1>
+        <img
+          src="../../assets/img/golden_future_logo.png"
+          width="80px"
+          height="80px"
+        />
+      </div>
+      <p class="welcome-text">
+        Golden Future Life is a reputable company renowned for its unwavering
+        commitment to delivering high-quality silver and gold products.
+        <br />With a transparent and dependable chain network business
+        structure, they have earned the trust of countless<br />
+        individuals seeking reliable investment opportunities in precious
+        metals.
+      </p>
+      <div>
+        <h4 class="myprofile-title"><u class="under-line">My Portfolio</u></h4>
+        <app-user-myprofile [userData]="userProfileData"></app-user-myprofile>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="container">
+  <h4>User Payment</h4>
+  <div class="btn-group" role="group" aria-label="Basic button toggle group">
+    <button
+      type="button"
+      class="btn"
+      [ngClass]="{
+        'btn-primary': button1Selected,
+        'btn-outline-primary': !button1Selected
+      }"
+      (click)="toggleButton(1)"
+    >
+      Pending list
+    </button>
+
+    <button
+      type="button"
+      class="btn"
+      [ngClass]="{
+        'btn-primary': button2Selected,
+        'btn-outline-primary': !button2Selected
+      }"
+      (click)="toggleButton(2)"
+    >
+      Accepted list
+    </button>
+
+    <button
+      type="button"
+      class="btn"
+      [ngClass]="{
+        'btn-primary': button3Selected,
+        'btn-outline-primary': !button3Selected
+      }"
+      (click)="toggleButton(3)"
+    >
+      Rejected list
+    </button>
+  </div>
+</div>
+
+<div class="tables">
+  <app-admin-payment-pending-list
+    *ngIf="button1Selected"
+  ></app-admin-payment-pending-list>
+  <app-admin-payment-accepted-list
+    *ngIf="button2Selected"
+  ></app-admin-payment-accepted-list>
+  <app-admin-payment-rejected-list
+    *ngIf="button3Selected"
+  ></app-admin-payment-rejected-list>
+</div>

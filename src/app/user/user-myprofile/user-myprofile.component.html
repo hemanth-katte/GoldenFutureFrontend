@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-12 left-div">
+      <h4><u>My Profile</u></h4>
+      <p class="myprofile-text">
+        My ID: <span>{{ userData.referenceId }}</span>
+
+        <i
+          (click)="shareLink(userData.referenceId)"
+          class="fa fa-share-square-o"
+          style="margin-left: 10px; color: white; cursor: pointer"
+          aria-hidden="true"
+        ></i>
+      </p>
+      <p class="myprofile-text capitalize">
+        First name: <span>{{ userData.firstname }}</span>
+      </p>
+      <p class="myprofile-text capitalize">
+        Last name: <span>{{ userData.lastname }}</span>
+      </p>
+      <p class="myprofile-text">
+        Phone: <span>{{ userData.email }}</span>
+      </p>
+      <p class="myprofile-text">
+        Email: <span>{{ userData.phone }}</span>
+      </p>
+      <p class="myprofile-text">
+        Delivery Type: <span>{{ userData.shipmentType }}</span>
+      </p>
+      <p class="myprofile-text">
+        Address: <span>{{ userData.address }}</span>
+      </p>
+    </div>
+    <div class="col-md-5 col-12 rigt-div">
+      <div class="row">
+        <div class="col-md-12 col-12">
+          <div class="row">
+            <div class="col-md-5 col-4 profile-div-1">
+              <h5>My Plan</h5>
+              <h4 class="tiles-font" *ngIf="userData.productId == 1">
+                Lite Silver
+              </h4>
+              <h4 class="tiles-font" *ngIf="userData.productId == 2">
+                Elite Silver
+              </h4>
+              <h4 class="tiles-font" *ngIf="userData.productId == 3">
+                Pro Silver
+              </h4>
+              <h4 class="tiles-font" *ngIf="userData.productId == 4">
+                Ultra Gold
+              </h4>
+            </div>
+            <div class="col-md-5 col-4 profile-div-2" style="cursor: pointer">
+              <a (click)="navigateTOUserNetwork(1)">
+                <h5 class="tiles-heading" style="cursor: pointer">
+                  Level 1 Network
+                </h5>
+                <h4 class="tiles-font" style="cursor: pointer">
+                  {{ userData.firstLevelCount }}
+                </h4></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-12" style="cursor: pointer">
+          <div class="row">
+            <div class="col-md-5 col-4 profile-div-3">
+              <a (click)="navigateTOUserNetwork(2)">
+                <h5 class="tiles-heading" style="cursor: pointer">
+                  Level 2 Network
+                </h5>
+                <h4 class="tiles-font" style="cursor: pointer">
+                  {{ userData.secondLevelCount }}
+                </h4></a
+              >
+            </div>
+            <div class="col-md-5 col-4 profile-div-4" style="cursor: pointer">
+              <a (click)="navigateTOUserNetwork(3)">
+                <h5 class="tiles-heading" style="cursor: pointer">
+                  Level 3 Network
+                </h5>
+                <h4 class="tiles-font" style="cursor: pointer">
+                  {{ userData.thirdLevelCount }}
+                </h4></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

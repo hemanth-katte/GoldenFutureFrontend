@@ -1,0 +1,193 @@
+/*Contact sectiom*/
+.content-header {
+  font-family: "Oleo Script", cursive;
+  color: #fcc500;
+  font-size: 45px;
+}
+
+.section-content {
+  text-align: center;
+  margin-top: 60px;
+}
+.section-header {
+  color: #fff;
+}
+
+#contact {
+  font-family: "Teko", sans-serif;
+  padding-top: 60px;
+  width: 100%;
+  height: 280vh;
+  background-size: cover;
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #3a6186,
+    #89253e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #3a6186,
+    #89253e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #686868;
+}
+.contact-section {
+  background-color: #ffffff;
+}
+
+.form-line {
+  border-right: 1px solid #b29999;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+label {
+  font-size: 1.3em;
+  line-height: 1em;
+  font-weight: normal;
+}
+.form-control {
+  font-size: 1.3em;
+  color: #080808;
+}
+textarea.form-control {
+  height: 135px;
+}
+
+.form-control-select{
+    font-size: 1.3em;
+    color: #080808;
+    width: 100%;
+}
+.submit {
+  margin-top: 20px;
+  font-size: 1.1em;
+  width: 150px;
+  color: #fff;
+  background-color: #11abdd;
+}
+
+.logo-background {
+  background-image: url("../../../assets/img/bg4.jpg");
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo-center {
+  text-align: center;
+  margin-top: 110px;
+}
+
+.main-div {
+  margin: 10px;
+}
+
+.login-heading {
+  margin-top: 20px;
+  text-align: center;
+  color: #44a1f7;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 18px;
+}
+
+.login-div {
+  padding: 30px;
+}
+
+.login-text {
+  color: #ef440b;
+  font-style: italic;
+}
+
+.img-product {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 5px 5px 5px 5px;
+}
+
+.card-body {
+  font-size: 20px;
+  color: white;
+  padding: 5px 5px 5px 5px;
+}
+
+.card-title {
+  font-size: 22px;
+  color: white;
+}
+
+.text-body-secondary {
+  color: white !important;
+}
+
+.product-card {
+  background: linear-gradient(to right, #3a6186, #89253e);
+}
+
+.qr-code {
+  text-align: center;
+}
+
+.custom-radio {
+  text-align: left;
+  float: left;
+}
+
+/* Hide the default radio button */
+.custom-radio input[type="radio"] {
+  display: none;
+}
+
+/* Style the custom radio button */
+.custom-radio {
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px; /* Add space for the tick mark */
+  margin-bottom: 10px;
+}
+
+/* Create the tick mark using a pseudo-element */
+.custom-radio .tick-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ededed; /* Change color as needed */
+  border-radius: 50%;
+}
+
+/* Style the tick mark when the radio button is checked */
+.custom-radio input[type="radio"]:checked + .tick-mark::after {
+  content: "\2713"; /* Unicode checkmark symbol */
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: white; /* Change color as needed */
+  background-color: #49ea04;
+  border-radius: 50%;
+  height: 17px;
+}
+
+.upi-id{
+    font-size: 20px;
+    padding: 5px;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+ }
+ small{
+   color: red;
+ }
+
+ .showError{
+  color: red;
+  }

@@ -1,0 +1,436 @@
+<section id="contact">
+  <div class="section-content">
+    <h1 class="section-header"><i>Golden Future</i></h1>
+  </div>
+  <div class="main-div card-div row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="contact-section">
+          <div class="container">
+            <form [formGroup]="userForm" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-md-6 col-12 login-div">
+                  <h3 class="login-heading">Sign up</h3>
+                  <p><span style="color: red">*</span> Indicates Mandatory</p>
+                  <h3 class="login-text">Personal Information</h3>
+                  <div class="form-group">
+                    <label for="sponsorId">Sponsor ID</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="sponsorId"
+                      placeholder="Only if there is a Sponsor"
+                      formControlName="sponsorId"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="firstname"
+                      >First name<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstname"
+                      placeholder="Enter First name"
+                      formControlName="firstname"
+                    />
+                    <small
+                      *ngIf="
+                        !userForm.get('firstname')?.valid &&
+                        userForm.get('firstname')?.touched
+                      "
+                    >
+                      Enter Valid First Name</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastname"
+                      placeholder="Enter Last name"
+                      formControlName="lastname"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="aadhar"
+                      >Aadhar Number<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="aadhar"
+                      placeholder="Enter Aadhar number"
+                      formControlName="aadhar"
+                    />
+                    <small
+                      *ngIf="
+                        !userForm.get('aadhar')?.valid &&
+                        userForm.get('aadhar')?.touched
+                      "
+                    >
+                      Enter Valid Aadhar Number</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="pan"
+                      >PAN Number<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="pan"
+                      placeholder=" Enter PAN Number"
+                      formControlName="pan"
+                    />
+                    <small
+                      *ngIf="
+                        !userForm.get('pan')?.valid &&
+                        userForm.get('pan')?.touched
+                      "
+                    >
+                      Enter Valid PAN Number</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="phone"
+                      >Phone<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phone"
+                      placeholder=" Enter Phone"
+                      formControlName="phone"
+                    />
+                    <small
+                      *ngIf="
+                        !userForm.get('phone')?.valid &&
+                        userForm.get('phone')?.touched
+                      "
+                    >
+                      Enter Valid Phone Number</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="email"
+                      >Email<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="email"
+                      placeholder=" Enter Email"
+                      formControlName="email"
+                    />
+                    <small
+                      *ngIf="
+                        !userForm.get('email')?.valid &&
+                        userForm.get('email')?.touched
+                      "
+                    >
+                      Enter Valid Email ID</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="password"
+                      >Password<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder="Enter New Password"
+                      formControlName="password"
+                    />
+                    <small
+                      *ngIf="
+                        !userForm.get('password')?.valid &&
+                        userForm.get('password')?.touched
+                      "
+                    >
+                      Password is required</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      placeholder=" Enter Address"
+                      formControlName="address"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="upiid"
+                      >Your UPI ID<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="upiid"
+                      placeholder=" Enter UPI ID"
+                      formControlName="upiid"
+                    />
+                    <small
+                      *ngIf="
+                        !userForm.get('upiid')?.valid &&
+                        userForm.get('upiid')?.touched
+                      "
+                    >
+                      Enter Valid UPI ID</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="deliveryType"
+                      >Select Delivery Type<span style="color: red"
+                        >*</span
+                      ></label
+                    ><br />
+                    <select
+                      class="form-control-select"
+                      id="deliveryType"
+                      formControlName="deliveryType"
+                    >
+                      <option value="COURIERDELIVARY">COURIERDELIVERY</option>
+                      <option value="TAKEAWAY">TAKEAWAY</option>
+                    </select>
+                  </div>
+                  <small
+                    *ngIf="
+                      !userForm.get('deliveryType')?.valid &&
+                      userForm.get('deliveryType')?.touched
+                    "
+                  >
+                    Delivery Type is required</small
+                  >
+                </div>
+                <div class="col-md-6 col-12">
+                  <br />
+                  <br />
+                  <h3 class="login-text">Select Product</h3>
+                  <div class="container text-center">
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <div
+                          class="card product-card mb-3"
+                          style="max-width: 300px"
+                          (click)="selectProduct(1)"
+                        >
+                          <div class="card-body">
+                            <label class="custom-radio">
+                              <input
+                                formControlName="productId"
+                                type="radio"
+                                [value]="1"
+                                [checked]="selectedProduct === 1"
+                                (change)="handleRadioClick($event, 1)"
+                              />
+                              <span class="tick-mark"></span>
+                            </label>
+                            <p class="card-text">
+                              Lite Silver Plan <br />
+                              5g 999/- Rs <br />
+                              <small class="text-body-secondary"
+                                >Renew every 5 years</small
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12">
+                        <div
+                          class="card product-card mb-3"
+                          style="max-width: 300px"
+                          (click)="selectProduct(2)"
+                        >
+                          <div class="card-body">
+                            <label class="custom-radio">
+                              <input
+                                formControlName="productId"
+                                type="radio"
+                                [value]="2"
+                                [checked]="selectedProduct === 2"
+                                (change)="handleRadioClick($event, 2)"
+                              />
+                              <span class="tick-mark"></span>
+                            </label>
+                            <p class="card-text">
+                              Elite Silver Plan <br />
+                              15g 2999/- Rs <br />
+                              <small class="text-body-secondary"
+                                >Renew every 5 years</small
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <div
+                          class="card product-card mb-3"
+                          style="max-width: 300px"
+                          (click)="selectProduct(3)"
+                        >
+                          <div class="card-body">
+                            <label class="custom-radio">
+                              <input
+                                formControlName="productId"
+                                type="radio"
+                                [value]="3"
+                                [checked]="selectedProduct === 3"
+                                (change)="handleRadioClick($event, 3)"
+                              />
+                              <span class="tick-mark"></span>
+                            </label>
+                            <p class="card-text">
+                              Pro Silver Plan <br />
+                              25g 4999/- Rs <br />
+                              <small class="text-body-secondary"
+                                >Renew every 5 years</small
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12">
+                        <div
+                          class="card product-card mb-3"
+                          style="max-width: 300px"
+                          (click)="selectProduct(4)"
+                        >
+                          <div class="card-body">
+                            <label class="custom-radio">
+                              <input
+                                formControlName="productId"
+                                type="radio"
+                                [value]="4"
+                                [checked]="selectedProduct === 4"
+                                (change)="handleRadioClick($event, 4)"
+                              />
+                              <span class="tick-mark"></span>
+                            </label>
+                            <p class="card-text">
+                              Ultra Gold Plan <br />
+                              1g 11999/- Rs <br />
+                              <small class="text-body-secondary"
+                                >Renew every 5 years</small
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <small
+                    *ngIf="
+                      userForm.get('productId')?.hasError('required') &&
+                      userForm.get('productId')?.touched
+                    "
+                  >
+                    Please select an option
+                  </small>
+
+                  <h3 class="login-text">Payment</h3>
+                  <div class="qr-code">
+                    <img
+                      src="../../assets/img/qr.jpg"
+                      width="200px"
+                      height="250px"
+                    />
+                    <p class="upi-id">
+                      (OR)<br /><b>UPI ID: </b>876543234565@ybi
+                    </p>
+                    <p style="color: red; font-size: larger">
+                      <b>Note: </b> If you have opted for Courier Delivery, make
+                      sure to add ₹29 extra to your selected plan amount
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <label for="screenshot"
+                      >Payment Screenshot<span style="color: red"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="screenshot"
+                      placeholder=" Upload Screenshot"
+                      formControlName="screenshot"
+                      (change)="onFileSelected($event)"
+                      accept="image/*"
+                    />
+                    <small
+                      *ngIf="
+                        userForm.get('screenshot')?.hasError('required') &&
+                        userForm.get('screenshot')?.touched
+                      "
+                    >
+                      File is required
+                    </small>
+                    <small
+                      *ngIf="
+                        userForm.get('screenshot')?.hasError('accept') &&
+                        userForm.get('screenshot')?.touched
+                      "
+                    >
+                      Please upload a valid file format (png, jpg, jpeg)
+                    </small>
+                    <img [src]="url" />
+                  </div>
+                  <div class="form-group">
+                    <label for="transcationNumber"
+                      >Transaction number<span style="color: red"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="transcationNumber"
+                      placeholder=" Enter Transaction number"
+                      formControlName="transcationNumber"
+                    />
+                    <small
+                      *ngIf="
+                        !userForm.get('transcationNumber')?.valid &&
+                        userForm.get('transcationNumber')?.touched
+                      "
+                    >
+                      Enter Valid Transaction Number</small
+                    >
+                  </div>
+
+                  <div style="text-align: center !important">
+                    <button
+                      type="button"
+                      id="submit"
+                      name="submit"
+                      class="btn btn-default submit"
+                      (click)="onUserSignUpFormSubmit()"
+                      [disabled]="userForm.invalid"
+                    >
+                      <i class="fa fa-paper-plane" aria-hidden="true"></i> Sign
+                      Up
+                    </button>
+                  </div>
+                  <br />
+                  <p class="signup-text">
+                    Already a member?
+                    <a routerLink="/login">Login</a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

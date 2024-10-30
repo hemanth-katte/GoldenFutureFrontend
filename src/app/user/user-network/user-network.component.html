@@ -1,0 +1,27 @@
+<app-user-navbar></app-user-navbar>
+<div class="container">
+  <div class="table-responsive">
+    <br />
+    <h4 style="text-align: center">My Network</h4>
+    <table class="table table-hover table-bordered border-primary">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Date</th>
+          <th scope="col">Name</th>
+          <th scope="col">Plan</th>
+          <th scope="col">Reference Id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of networkItems; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <th>{{ item.date }}</th>
+          <th>{{ item.name }}</th>
+          <th>{{ item.plan }}</th>
+          <th>{{ item.referenceId }}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

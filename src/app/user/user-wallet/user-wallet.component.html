@@ -1,0 +1,98 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="main-div">
+  <div class="main-card">
+    <div class="container">
+      <form [formGroup]="walletForm">
+      <h2 class="mynetwork-title"><i>My Wallet</i></h2>
+      <div>
+        <div class="row">
+          <div class="col-md-12 col-12">
+            <div class="card border-primary mb-3">
+              <div class="card-body text-primary">
+                <h4>Balance: (In Rupees- ₹)</h4>
+                <div class="row">
+                  <div class="col-md-3 col-12">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="availableAmount"
+                      placeholder="Available Amount"
+                      [(ngModel)]="userBalance"
+                      formControlName="availableAmount"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <br />
+                <div>
+                  <h5>Withdraw Amount: (In Rupees- ₹)</h5>
+                  <div class="row">
+                    <div class="col-md-3 col-12">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="withdrawAmount"
+                        placeholder=" Enter Withdraw Amount"
+                        [(ngModel)]="withdrawAmount"
+                        formControlName="withdrawAmount"
+                      />
+                      <small *ngIf ="!walletForm.get('withdrawAmount')?.valid && walletForm.get('withdrawAmount')?.touched">
+                        Enter Valid Amount</small>
+                      <small *ngIf ="walletForm.errors?.['walletError'] && walletForm.get('withdrawAmount')?.touched">
+                          Withdraw Amount should be less than Balance</small>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div
+                        style="text-align: center !important; margin-top: 2px"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-primary submit"
+                          (click)="postWithdrawRequest()"
+                          [disabled]="walletForm.invalid"
+                        >
+                          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-12">
+              <br />
+              <h4 style="text-align: center">My Transcation Records</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Credit/Debit</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Balance</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of accountItems; let i = index">
+                      <td scope="row">{{ i + 1 }}</td>
+                      <td>{{ item.createdAt }}</td>
+                      <td>{{ item.transferType }}</td>
+                      <td>{{ item.amount }}</td>
+                      <td>{{ item.balance }}</td>
+                      <td>{{ item.accountStatus }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>

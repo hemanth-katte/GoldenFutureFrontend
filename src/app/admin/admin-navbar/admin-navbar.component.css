@@ -1,0 +1,38 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "Teko", sans-serif;
+}
+
+.nav-list {
+  font-size: 22px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home-bg {
+  width: 100% !important;
+  height: 900px;
+}
+
+.home-center-text {
+  font-size: 60px;
+  font-style: italic;
+  color: rgb(26, 68, 195);
+  font-weight: 700;
+}
+
+.btn{
+  font-family: "Teko", sans-serif;
+}

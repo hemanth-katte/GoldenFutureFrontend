@@ -1,0 +1,32 @@
+<div class="container" style="text-align: center !important">
+  <label for="start_date" style="margin-right: 10px">From Date: </label>
+  <input
+    type="date"
+    id="start_date"
+    name="start_date"
+    [(ngModel)]="startDate"
+  />
+  <br /><br />
+  <label for="end_date" style="margin-right: 23px">To Date: </label>
+  <input type="date" id="end_date" name="end_date" [(ngModel)]="endDate" />
+  <br /><br />
+</div>
+<br />
+<div style="text-align: center !important">
+  <button type="button" class="btn btn-primary" (click)="downloadExcelData()">
+    <i class="fa fa-download" aria-hidden="true"></i> Download in Excel Format
+  </button>
+</div>
+
+<script>
+  document.getElementById("start_date").addEventListener("change", function () {
+    const startDate = new Date(this.value);
+    document.getElementById("end_date").min = this.value;
+    document.getElementById("end_date").value =
+      (startDate.getMonth() + 1).toString().padStart(2, "0") +
+      "/" +
+      (startDate.getDate() + 1).toString().padStart(2, "0") +
+      "/" +
+      startDate.getFullYear();
+  });
+</script>

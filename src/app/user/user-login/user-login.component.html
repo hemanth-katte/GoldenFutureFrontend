@@ -1,0 +1,78 @@
+<section id="contact">
+  <div class="section-content">
+    <h1 class="section-header"><i>Golden Future</i></h1>
+  </div>
+  <div class="main-div card-div row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="contact-section">
+          <div class="container">
+            <form [formGroup]="loginForm">
+              <div class="row">
+                <div class="col-md-6 col-12 logo-background">
+                  <div class="logo-center">
+                    <img
+                      src="../../assets/img/golden_future_logo.png"
+                      width="180px"
+                      height="180px"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 login-div">
+                  <h3 class="login-heading">Login</h3>
+                  <p><span style="color: red;">*</span> Indicates Mandatory</p>
+                  <div class="form-group">
+                    <label for="phonenumber">Phone Number<span style="color: red;">*</span></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phonenumber"
+                      placeholder=" Enter Phone Number"
+                      formControlName="phonenumber"
+                    />
+                    <small *ngIf ="!loginForm.get('phonenumber')?.valid && loginForm.get('phonenumber')?.touched">
+                      Enter Valid Phone Number</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password<span style="color: red;">*</span></label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                      placeholder=" Enter Password"
+                      formControlName="password"
+                    />
+                    <small *ngIf ="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+                      Enter Valid Password</small>
+                  </div>
+                  <div style="text-align: center !important">
+                    <button
+                      type="button"
+                      class="btn btn-default submit"
+                      (click)="onSubmit()"
+                      [disabled]="loginForm.invalid"
+                    >
+                      <i class="fa fa-paper-plane" aria-hidden="true"></i> Login
+                    </button>
+                  </div>
+                  <br />
+                  <p class="signup-text">
+                    <a routerLink="/userForgotPassword">Forgot Password?</a>
+                  </p>
+                  <p class="signup-text">
+                    Not yet member?
+                    <a routerLink="/userSignUp">Create Account</a>
+                  </p>
+                  <p class="signup-text">
+                    Contact Us: +91 6362934674 or +91 6364845491<br />
+                    Gmail: goldenfuturelifeofficial@gmail.com
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

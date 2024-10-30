@@ -1,0 +1,74 @@
+.level-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: aquamarine;
+}
+
+.center {
+  text-align: center;
+  padding-top: 60px;
+  color: white !important;
+}
+
+.network-text {
+  font-size: 65px;
+}
+
+.mynetwork-title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #0b84dd;
+}
+
+.container {
+  font-family: "Teko", sans-serif;
+  margin-top: 180px;
+  margin-bottom: 180px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+}
+
+.card-title{
+  font-style: italic;
+}
+
+.main-div{
+  font-family: "Teko", sans-serif;
+  padding-top: 60px;
+  width: 100%;
+  height: 1200px;
+  background-size: cover;
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0d6efd,
+    #0d6efd
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #297cf8,
+    #0d6efd
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #686868;
+  font-family: "Teko", sans-serif;
+}
+
+.main-card{
+  margin: 0px 10px 0px 10px;
+}
+
+.card-header{
+  font-size: 18px;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+ }
+ 
+ small{
+   color: red;
+ }

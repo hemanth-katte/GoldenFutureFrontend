@@ -1,0 +1,38 @@
+# Compiled output
+dist/
+out-tsc/
+
+# Dependency directories
+node_modules/
+
+# Angular cache
+.angular/
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+
+# Logs and reports
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage files
+coverage/
+
+# Build artifacts and temporary files
+*.sass-cache
+.sass-cache
+*.scssc
+
